@@ -54,17 +54,17 @@ const DetailsPage: React.FC = () => {
     <div className="bg-gradient-to-b from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 p-6">
       <button
         onClick={() => navigate('/')}
-        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 mb-6 flex items-center space-x-2"
+        className="mx-auto bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 mb-6 flex items-center space-x-2 justify-center"
       >
         <span>&#8592;</span>
         <span>{intl.formatMessage({ id: 'back', defaultMessage: 'Back' })}</span>
       </button>
 
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200">
         {intl.formatMessage({ id: 'weather-details', defaultMessage: 'Weather Details' })}
       </h1>
 
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl space-y-6 max-w-4xl mx-auto">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl space-y-6 w-full max-w-4xl mx-auto">
         {weather?.[0]?.icon && (
           <div className="flex justify-center mb-6">
             <img
@@ -84,7 +84,7 @@ const DetailsPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 text-center text-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center text-lg">
           <div className="p-4 bg-blue-100 dark:bg-blue-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'day-temp', defaultMessage: 'Day Temp:' })}
@@ -111,7 +111,7 @@ const DetailsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 text-center text-lg mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center text-lg mt-6">
           <div className="p-4 bg-yellow-100 dark:bg-yellow-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'feels-like-day', defaultMessage: 'Feels like (Day):' })}
@@ -138,7 +138,7 @@ const DetailsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 text-center text-lg mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center text-lg mt-8">
           <div className="p-4 bg-gray-100 dark:bg-gray-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'humidity', defaultMessage: 'Humidity:' })}
