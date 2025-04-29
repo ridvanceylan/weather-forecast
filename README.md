@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Weather App is a React-based application that allows users to check current weather conditions, search for weather in different cities, and view a 7-day weather forecast. The app uses geolocation to display the weather for the user's current location, and also supports searching for weather by city name. The app fetches data from the OpenWeather API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Current Weather**: Displays the current weather conditions of a city or based on the user's geolocation.
+- **7-Day Forecast**: Provides a 7-day weather forecast based on location or city search.
+- **Search Functionality**: Users can search for weather in different cities.
+- **Unit Switching**: Users can switch between Celsius and Fahrenheit for temperature units.
+- **Multi-Language Support**: Supports different languages for international users.
+- **Responsive Design**: Optimized for desktop and mobile devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frontend**: React, TypeScript
+- **Weather Data**: OpenWeather API
+- **State Management**: React Context for unit and language preferences
+- **Geolocation**: Browser's Geolocation API for user location
+- **Styling**: Tailwind CSS for a responsive, utility-first design
+- **Localization**: React Intl for multi-language support
+- **React Query**: For data fetching and caching
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+cd weather-app
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+npm install
+
+
+Usage
+Search by City: Enter the name of any city in the search bar to get the current weather and a 7-day forecast.
+
+Use Geolocation: If enabled, the app automatically fetches weather based on your current location.
+
+Switch Units: Toggle between Celsius and Fahrenheit for temperature units.
+
+Change Language: The app supports multiple languages (e.g., English, Spanish). You can switch between them in the settings.
+
