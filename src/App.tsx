@@ -12,6 +12,8 @@ import { UnitProvider } from './contexts/UnitContext';
 
 import en from './i18n/en.json';
 import es from './i18n/es.json';
+import tr from './i18n/tr.json';
+
 import './index.css';
 
 const queryClient = new QueryClient();
@@ -22,6 +24,7 @@ const AppContent: React.FC = () => {
   const messages = {
     en,
     es,
+    tr,
   };
 
   return (
