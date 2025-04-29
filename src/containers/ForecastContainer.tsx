@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useForecastWeather } from '../hooks/useForecastWeather';
 import ForecastList from '../components/ForecastList'; 
 import UnitSwitcher from '../components/UnitSwitcher';
 import { useIntl } from 'react-intl';
 
 interface ForecastContainerProps {
-  lat: number;
-  lon: number;
+  lat?: number;
+  lon?: number;
 }
 
 const ForecastContainer: React.FC<ForecastContainerProps> = ({ lat, lon }) => {
-  const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const intl = useIntl();
 
   const { data, error: forecastError } = useForecastWeather(lat, lon);
 
-  useEffect(() => {
-    if (lat && lon) {
-      setLocation({ lat, lon });
-    }
-  }, [lat, lon]);
+
 
   if (forecastError) {
     return (
