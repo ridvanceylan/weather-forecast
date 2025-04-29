@@ -22,3 +22,20 @@ Weather App is a React-based application that allows users to check current weat
 - **Styling**: Tailwind CSS for a responsive, utility-first design
 - **Localization**: React Intl for multi-language support
 - **React Query**: For data fetching and caching
+
+Install dependencies:
+
+cd weather-app
+
+npm install
+
+
+Usage
+Search by City: Enter the name of any city in the search bar to get the current weather and a 7-day forecast.
+
+Use Geolocation: If enabled, the app automatically fetches weather based on your current location.
+
+Switch Units: Toggle between Celsius and Fahrenheit for temperature units.
+
+Change Language: The app supports multiple languages (e.g., English, Spanish). You can switch between them in the settings.
+
