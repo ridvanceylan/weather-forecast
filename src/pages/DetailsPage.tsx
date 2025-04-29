@@ -52,13 +52,15 @@ const DetailsPage: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-b from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 p-6">
-      <button
-        onClick={() => navigate('/')}
-        className="mx-auto bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 mb-6 flex items-center space-x-2 justify-center"
-      >
-        <span>&#8592;</span>
-        <span>{intl.formatMessage({ id: 'back', defaultMessage: 'Back' })}</span>
-      </button>
+      <div className="flex justify-start mb-6">
+        <button
+          onClick={() => navigate('/')}
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2"
+        >
+          <span>&#8592;</span>
+          <span>{intl.formatMessage({ id: 'back', defaultMessage: 'Back' })}</span>
+        </button>
+      </div>
 
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200">
         {intl.formatMessage({ id: 'weather-details', defaultMessage: 'Weather Details' })}
