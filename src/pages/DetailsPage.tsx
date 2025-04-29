@@ -91,25 +91,25 @@ const DetailsPage: React.FC = () => {
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'day-temp', defaultMessage: 'Day Temp:' })}
             </strong> 
-            {temp?.day}{unit === 'metric' ? '°C' : '°F'}
+            {temp?.day.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
           <div className="p-4 bg-blue-100 dark:bg-blue-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'night-temp', defaultMessage: 'Night Temp:' })}
             </strong> 
-            {temp?.night}{unit === 'metric' ? '°C' : '°F'}
+            {temp?.night.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
           <div className="p-4 bg-green-100 dark:bg-green-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'max-temp', defaultMessage: 'Max Temp:' })}
             </strong> 
-            {temp?.max}{unit === 'metric' ? '°C' : '°F'}
+            {temp?.max.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
           <div className="p-4 bg-green-100 dark:bg-green-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'min-temp', defaultMessage: 'Min Temp:' })}
             </strong> 
-            {temp?.min}{unit === 'metric' ? '°C' : '°F'}
+            {temp?.min.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
         </div>
 
@@ -118,25 +118,25 @@ const DetailsPage: React.FC = () => {
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'feels-like-day', defaultMessage: 'Feels like (Day):' })}
             </strong> 
-            {feels_like?.day}{unit === 'metric' ? '°C' : '°F'}
+            {feels_like?.day.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
           <div className="p-4 bg-yellow-100 dark:bg-yellow-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'feels-like-night', defaultMessage: 'Feels like (Night):' })}
             </strong> 
-            {feels_like?.night}{unit === 'metric' ? '°C' : '°F'}
+            {feels_like?.night.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
           <div className="p-4 bg-red-100 dark:bg-red-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'feels-like-morning', defaultMessage: 'Feels like (Morning):' })}
             </strong> 
-            {feels_like?.morn}{unit === 'metric' ? '°C' : '°F'}
+            {feels_like?.morn.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
           <div className="p-4 bg-red-100 dark:bg-red-700 rounded-xl shadow-lg">
             <strong className="text-gray-800 dark:text-gray-200">
               {intl.formatMessage({ id: 'feels-like-evening', defaultMessage: 'Feels like (Evening):' })}
             </strong> 
-            {feels_like?.eve}{unit === 'metric' ? '°C' : '°F'}
+            {feels_like?.eve.toFixed(1)}{unit === 'metric' ? '°C' : '°F'}
           </div>
         </div>
 
