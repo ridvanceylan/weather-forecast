@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark [data-testid="rfs-btn"] {
+  background-color: #333333;
+  color: white;
+  border-color: #555555;
+}
+
+.dark [role="listbox"] {
+  background-color: #333333;
+  color: white;
+  border-color: #555555;
+}
