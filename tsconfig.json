@@ -1,16 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "types": ["@testing-library/jest-dom"],
-    "esModuleInterop": true,
-    "jsx": "react-jsx", 
-    "strict": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true
-  },
-  "include": [
-    "src/**/*",
-    "tests/**/*"
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
   ]
 }
