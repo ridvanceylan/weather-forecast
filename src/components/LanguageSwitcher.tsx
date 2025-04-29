@@ -21,6 +21,7 @@ const LanguageSwitcher: React.FC = React.memo(() => {
           'TR'
         }
         onSelect={changeLanguageHandler}
+        aria-label="Select language"
         className="w-full dark:bg-gray-700 dark:text-white rounded-lg"
       />
     </div>
