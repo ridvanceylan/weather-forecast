@@ -28,7 +28,7 @@ const ForecastContainer: React.FC<ForecastContainerProps> = ({ lat, lon }) => {
     <div className="p-4 space-y-6 bg-white dark:bg-gray-900">
       <UnitSwitcher />
       <h1 className="text-2xl font-bold text-center mb-4 text-gray-800 dark:text-gray-200">
-        {intl.formatMessage({ id: 'forecast.title', defaultMessage: '7-Day Forecast' })}
+        {intl.formatMessage({ id: 'error', defaultMessage: '7-Day Forecast' })}
       </h1>
       {data ? <ForecastList forecastData={data} /> : <div className="text-center">No forecast data available.</div>}
     </div>
