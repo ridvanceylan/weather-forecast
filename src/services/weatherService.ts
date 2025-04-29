@@ -12,7 +12,7 @@ const handleApiError = (error: any, defaultMessage: string) => {
 export const getCurrentWeather = async (
   city: string,
   unit: 'metric' | 'imperial',
-  lang: string // ← eklendi
+  lang: string
 ) => {
   try {
     const response = await axios.get(`${BASE_URL}/weather`, {
@@ -20,7 +20,7 @@ export const getCurrentWeather = async (
         q: city,
         appid: API_KEY,
         units: unit,
-        lang, // ← eklendi
+        lang,
       },
     });
     return response.data;
@@ -34,7 +34,7 @@ export const getCurrentWeatherByCoords = async (
   lat: number,
   lon: number,
   unit: 'metric' | 'imperial',
-  lang: string // ← eklendi
+  lang: string
 ) => {
   try {
     const response = await axios.get(`${BASE_URL}/weather`, {
@@ -43,7 +43,7 @@ export const getCurrentWeatherByCoords = async (
         lon,
         appid: API_KEY,
         units: unit,
-        lang, // ← eklendi
+        lang,
       },
     });
     return response.data;
@@ -57,7 +57,7 @@ export const getForecastWeather = async (
   lat: number,
   lon: number,
   unit: 'metric' | 'imperial',
-  lang: string // ← eklendi
+  lang: string
 ) => {
   try {
     const response = await axios.get(`${BASE_URL_FORECAST}/onecall`, {
@@ -67,7 +67,7 @@ export const getForecastWeather = async (
         exclude: 'minutely,hourly,alerts',
         appid: API_KEY,
         units: unit,
-        lang, // ← eklendi
+        lang,
       },
     });
     return response.data;
