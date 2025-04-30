@@ -26,5 +26,7 @@
   "sunset": "Sunset:",
   "moonrise": "Moonrise:",
   "moonset": "Moonset:",
-  "no-summary": "No summary available"
+  "no-summary": "No summary available",
+  "switchToF": "Switch to °F",
+  "switchToC": "Switch to °C"
 }
