@@ -1,8 +1,14 @@
 # Weather App
 
+Vercel : https://weather-forecast-gules-one.vercel.app/
+
 ## Description
 
 Weather App is a React-based application that allows users to check current weather conditions, search for weather in different cities, and view a 7-day weather forecast. The app uses geolocation to display the weather for the user's current location, and also supports searching for weather by city name. The app fetches data from the OpenWeather API.
+
+Note: The https://api.openweathermap.org/data/2.5/onecall endpoint is now deprecated. It has been replaced by the One Call API 3.0, which introduces updated data structures and additional features.
+
+Please note that One Call API 3.0 is a paid service. Usage exceeding 1,000 daily requests requires a paid subscription.
 
 ## Features
 
@@ -41,4 +47,3 @@ Change Language: The app supports multiple languages (e.g., English, Spanish). Y
 
 
 
-Vercel : https://weather-forecast-gules-one.vercel.app/
