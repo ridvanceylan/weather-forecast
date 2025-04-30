@@ -8,7 +8,7 @@ const handleApiError = (error: any, defaultMessage: string) => {
   return new Error(defaultMessage);
 };
 
-// ŞEHİR BAZLI
+
 export const getCurrentWeather = async (
   city: string,
   unit: 'metric' | 'imperial',
@@ -29,7 +29,6 @@ export const getCurrentWeather = async (
   }
 };
 
-// KOORDİNAT BAZLI
 export const getCurrentWeatherByCoords = async (
   lat: number,
   lon: number,
@@ -52,7 +51,6 @@ export const getCurrentWeatherByCoords = async (
   }
 };
 
-// TAHMİN
 export const getForecastWeather = async (
   lat: number,
   lon: number,

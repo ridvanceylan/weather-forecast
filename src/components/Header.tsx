@@ -1,13 +1,13 @@
 // components/Header.tsx
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import {ThemeSwitcher} from './ThemeSwitcher';
-import LanguageSwitcher from './LanguageSwitcher';
+import React from "react";
+import { useLocation } from "react-router-dom";
+import { ThemeSwitcher } from "./ThemeSwitcher";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header: React.FC = () => {
   const location = useLocation();
 
-  if (location.pathname !== '/') {
+  if (location.pathname !== "/") {
     return null;
   }
 

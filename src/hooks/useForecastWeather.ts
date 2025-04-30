@@ -8,13 +8,13 @@ export const useForecastWeather = (lat?: number, lon?: number) => {
   const { language } = useLanguage();
 
   return useQuery({
-    queryKey: ['forecastWeather', { lat, lon, unit, language }],
+    queryKey: ['forecastWeather', lat, lon, unit, language],
     queryFn: () => {
       if (lat != null && lon != null) {
         return getForecastWeather(lat, lon, unit, language);
       }
       return Promise.reject('No valid coordinates for forecast');
     },
-    enabled: !!(lat && lon),
+    enabled: lat != null && lon != null,
   });
 };
