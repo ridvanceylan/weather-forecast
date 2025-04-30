@@ -1,5 +1,8 @@
+// WeatherCard.tsx
 import React from "react";
 import { useUnit } from "../contexts/UnitContext";
+import MotionCard from "./MotionCard";
+
 type WeatherCardProps = {
   data: any;
 };
@@ -11,7 +14,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ data }) => {
   const { unit } = useUnit();
 
   return (
-    <div className="bg-gradient-to-r from-blue-400 to-indigo-700 dark:from-gray-800 dark:to-gray-950 text-white dark:text-gray-200 p-6 rounded-lg shadow-lg max-w-xs mx-auto my-4 transform transition duration-300 hover:scale-105">
+    <MotionCard className="bg-gradient-to-r from-blue-400 to-indigo-700 dark:from-gray-800 dark:to-gray-950 text-white dark:text-gray-200 p-6 rounded-lg shadow-lg max-w-xs mx-auto my-4 transform transition duration-300 hover:scale-105">
       <h2 className="text-3xl font-bold text-center mb-4">{data.name}</h2>
 
       <div className="flex justify-center mb-4">
@@ -40,7 +43,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ data }) => {
           <p>{data.wind.speed} m/s</p>
         </div>
       </div>
-    </div>
+    </MotionCard>
   );
 };
 

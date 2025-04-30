@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useUnit } from "../contexts/UnitContext";
 import { useIntl } from "react-intl";
+import MotionCard from "../components/MotionCard";
 
 const DetailsPage: React.FC = () => {
   const { state } = useLocation();
@@ -77,7 +78,7 @@ const DetailsPage: React.FC = () => {
         })}
       </h1>
 
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl space-y-6 w-full max-w-4xl mx-auto">
+      <MotionCard className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl space-y-6 w-full max-w-4xl mx-auto">
         {weather?.[0]?.icon && (
           <div className="flex justify-center mb-6">
             <img
@@ -285,7 +286,7 @@ const DetailsPage: React.FC = () => {
             {formatTime(moonset)}
           </div>
         </div>
-      </div>
+      </MotionCard>
     </div>
   );
 };
