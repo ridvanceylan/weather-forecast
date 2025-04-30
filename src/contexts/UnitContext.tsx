@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
-type Unit = 'metric' | 'imperial';
+type Unit = "metric" | "imperial";
 
 interface UnitContextProps {
   unit: Unit;
@@ -9,11 +9,13 @@ interface UnitContextProps {
 
 const UnitContext = createContext<UnitContextProps | undefined>(undefined);
 
-export const UnitProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [unit, setUnit] = useState<Unit>('metric');
+export const UnitProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const [unit, setUnit] = useState<Unit>("metric");
 
   const toggleUnit = () => {
-    setUnit((prev) => (prev === 'metric' ? 'imperial' : 'metric'));
+    setUnit((prev) => (prev === "metric" ? "imperial" : "metric"));
   };
 
   return (
@@ -25,6 +27,6 @@ export const UnitProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
 export const useUnit = () => {
   const context = useContext(UnitContext);
-  if (!context) throw new Error('useUnit must be used within a UnitProvider');
+  if (!context) throw new Error("useUnit must be used within a UnitProvider");
   return context;
 };

@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface LoadingSpinnerProps {
-  isLoading: boolean; 
+  isLoading: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ isLoading }) => {
